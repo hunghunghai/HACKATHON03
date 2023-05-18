@@ -4,18 +4,18 @@ import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
 import KeyboardArrowLeftOutlinedIcon from '@mui/icons-material/KeyboardArrowLeftOutlined';
 import ChevronRightOutlinedIcon from '@mui/icons-material/ChevronRightOutlined';
 
-export default function ProductCard({ product, isItemInCart, handleAddToCart, handleRemoveFromCart, cartItems }) {
-    const [qty, setQty] = useState(0);
+    export default function ProductCard({ product, isItemInCart, handleAddToCart, handleRemoveFromCart, cartItems }) {
+  const [qty, setQty] = useState(0);
 
-    const handleAdd = () => {
-        handleAddToCart(product);
-        setQty(qty + 1);
-    };
+  const handleAdd = () => {
+    handleAddToCart(product);
+    setQty(qty + 1);
+  };
 
-    const handleRemove = () => {
-        handleRemoveFromCart(product);
-        setQty(qty - 1);
-    };
+  const handleRemove = () => {
+    handleRemoveFromCart(product);
+    setQty(qty - 1);
+  };
 
     return (
         <div className='cart'>
@@ -42,7 +42,9 @@ export default function ProductCard({ product, isItemInCart, handleAddToCart, ha
                             <button onClick={handleRemove}>
                                 <KeyboardArrowLeftOutlinedIcon />
                             </button>
-                            <p>{qty}</p>
+                            {qty > 0 && (
+                                <p>{qty}</p>
+                            )}
                             <button onClick={handleAdd}>
                                 <ChevronRightOutlinedIcon />
                             </button>

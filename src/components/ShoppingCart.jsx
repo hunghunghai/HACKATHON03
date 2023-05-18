@@ -140,17 +140,19 @@ export default function ShoppingCart() {
             />
             <div className="box-product">
                 {/* Render product cards */}
-                {products.map((product, index) => (
+                {products.map((product) => (
                     <ProductCard
-                        key={index}
+                        key={product.uniqueKey}
                         product={product}
                         isItemInCart={isItemInCart}
                         handleAddToCart={handleAddToCart}
                         handleRemoveFromCart={handleRemoveFromCart}
                         handleIncreaseQty={handleIncreaseQty}
                         handleDecreaseQty={handleDecreaseQty}
+                        cartItems={cartItems}
                     />
                 ))}
+
             </div>
         </div>
     );
