@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.background-container {
+    padding-top: 100px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('https://img.freepik.com/premium-vector/background-with-colorful-shopping-bags-vector-illustration-sale-discount-concept_653240-59.jpg');
+}
+
+.btn-up-down{
+    background-color: transparent;
+    color: #000;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    
+}
+.order {
+    background-color: rgb(71, 173, 71);
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+.box-product {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.cart {
+    height: 350px;
+    background-color: #000;
+    color: #fff;
+    width: 250px;
+    border-radius: 20px;
+    color: #fff;
+    position: relative;
+}
+
+
+.img-product img {
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.mt {
+    margin-top: 30px;
+}
+
+.mt2 {
+    margin-top: 50px;
+}
+
+.cart-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.btn-shopping-cart {
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.btn-shopping-cart button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.cart:hover .info-product {
+    display: block;
+    transform: translateY(-50%);
+}
+
+.info-product {
+    width: 100%;
+    background-color: #2e2d2d;
+    display: none;
+    position: absolute;
+    top: 65%;
+    /* Đặt top là 50% để căn giữa theo chiều dọc */
+    left: 0;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    padding: 10px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.cart:hover {
+  transform: scale(1.1); /* Phóng to cart */
+  z-index: 1; /* Đặt z-index để cart hiển thị trên các phần tử khác */
+}
+
+.cart:hover .info-product {
+    transform: translateY(-50%);
+}
+
+.name-product,
+.action-product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.action button {
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+}
+.add-product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border: 1px solid #9b9b9b;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.shopping-table {
+    width: 100%;
+    border: 1px solid #000;
+}
+
+th ,td {
+    border: 1px solid #000;
+    text-align: center;
+}
+
